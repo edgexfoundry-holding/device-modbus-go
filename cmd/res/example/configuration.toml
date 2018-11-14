@@ -82,17 +82,6 @@ Name = "10sec-schedule"
 Frequency = "PT10S"
 
 [[ScheduleEvents]]
-Name = "Get HVAC Values"
-Schedule = "10sec-schedule"
-Service="edgex-support-scheduler"
-  [ScheduleEvents.Addressable]
-  Protocol = "HTTP"
-  HTTPMethod = "GET"
-  Address = "edgex-device-modbus"
-  Port = 49991
-  Path = "/api/v1/device/name/Modbus TCP test device/GetHVACValues"
-
-[[ScheduleEvents]]
 Name = "Set HVAC Values"
 Parameters = "[{\"OperationMode\": \"Auto\"},{\"FanSpeed\": \"Med\"},{\"Temperature\": \"11.22\"}]"
 Schedule = "10sec-schedule"
