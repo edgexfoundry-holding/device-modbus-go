@@ -7,12 +7,13 @@
 package main
 
 import (
+	"github.com/edgexfoundry/device-modbus-go"
 	"github.com/edgexfoundry/device-modbus-go/internal/driver"
 	"github.com/edgexfoundry/device-sdk-go/pkg/startup"
 )
 
 const (
-	version     string = "1.0"
+	version     string = device_modbus.Version
 	serviceName string = "edgex-device-modbus"
 )
 
